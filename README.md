@@ -1,48 +1,14 @@
-# SGV - API
-
-Reference:
-@github/AlexViderman idea from heroku in node.js
-* git clone https://github.com/AlexViderman/heroku-selenium.git
-
+# Subvenção SP - API
 
 ## Funções:
 
-###### buscarInspecaoID/:id
+###### subvencao/
 
-> Realiza a busca do numero de `inspecao_id` pelo numero do `workflow_id`.
-
-*Exemplo:*
-
-```
- http://localhost:14000/buscarInspecaoID/8466623
-
-```
-
-###### listarWFID/
-
-> Realiza a busca do numero de `workflow_id` na tabela DTGInstancia.
-
->  `?atividade=` deve ser usado na chamado.
+> Realiza o empenho da subvenção de SP
 
 *Exemplo:*
 
 ```
- http://localhost:14000/listarWFID/?atividade=Validação da pré-valorização
-
-```
-
-
-###### selecao/
-
->  `?wf_id=` deve ser usado na chamado.
-
->  `?inspecao_id=` deve ser usado na chamado.
-
->  `?nome_empresa=` deve ser usado na chamado.
-
-*Exemplo:*
-
-```
- http://localhost:14000/selecao/?wf_id=8466623&inspecao_id=403134&nome_empresa=COOPERATIVA DE VISTORIADORES DO SUL DO BRASIL LTDA - RS, PELOTAS
+http://10.207.42.90:14000/subvencao2/?cpf=24829308800proposta=47025684871707valorSubvencao=2549,43
 
 ```
