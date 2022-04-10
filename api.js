@@ -119,8 +119,8 @@ function logar(){
     driver.getCurrentUrl().then(function(url){        
         if (link == url) {
             acessarSite();
-            inserirCPF( "28059024833");
-            inserirInput("senha", "Mapfre2018");
+            inserirCPF( "{login}");
+            inserirInput("senha", "{senha}");
             pressionarBotao("btnLogin");
             pressionarBotao("id_img_sub_form_b");
             console.log("Realizando login...")
@@ -141,40 +141,7 @@ app.get('/subvencao/',  function (req, res) {
     let valorSubvencao = req.query.valorSubvencao;
    
     logar();
-  
-    //Tela de Consulta de CADIN
-/*
-    driver.findElement(By.id("id_img_sub_form_b")).click();
-    driver.wait(  webdriver.until.elementLocated(By.id('item_145')),   20000);
-    driver.get("https://suser.agricultura.sp.gov.br/segrural/cntr_cadastroSS_verifica_CADIN/"); 
-
-    //Informar o CPF / CNPJ
-
-    driver.wait(  webdriver.until.elementLocated(By.id('id_img_sub_form_b')),   20000);
-    driver.findElement(By.id("id_sc_field_documentosegurado")).sendKeys(cpf);
-    driver.findElement(By.id("id_img_sub_form_b")).click();
-    driver.wait(  webdriver.until.elementLocated(By.id('id_img_sub_form_b')),   20000);
-    driver.findElement(By.id("id_img_sub_form_b")).click();    
-
-    //Informar a Proposta
-
-    driver.wait(  webdriver.until.elementLocated(By.id('id_sc_field_codigoproposta')),   20000);
-    driver.findElement(By.id("id_sc_field_codigoproposta")).sendKeys(proposta);
-    driver.findElement(By.id("id_sc_field_valorsubvencao")).sendKeys(valorSubvencao);
-    driver.findElement(By.id("id_img_sub_form_b")).click();
-    //driver.wait(  webdriver.until.elementLocated(By.id('id_error_message_fixed')),   5000);
-   
-    driver.executeScript(function() {
-        return document.querySelector('#id_error_message_fixed').innerHTML;
-        }).then(function(innerHTML) {
-        var resultado_json = JSON.stringify({"data": innerHTML});
-        res.status(200).send(resultado_json  );
-        });
-      */
-
-
-
-    
+         
 
 });
 
